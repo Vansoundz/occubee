@@ -24,9 +24,14 @@ const Profile = ({
       if (p) {
         setuser(p);
       }
-      console.log(user);
     }
   }, [users]);
+  useEffect(() => {
+    let p = users.find(user => user.id.toString() === id);
+    if (p) {
+      setuser(p);
+    }
+  }, [id]);
   return (
     <div>
       {loading ? (
