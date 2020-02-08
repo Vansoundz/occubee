@@ -59,21 +59,16 @@ const Edit = ({
 
   const onSubmit = async e => {
     e.preventDefault();
-    setFeedback("Bio id required");
-    setTimeout(setFeedback(""), 2000);
+
     const { name, email, occupation, bio } = user;
     if (!name) {
       setFeedback("Name id required");
-      setTimeout(setFeedback(""), 2000);
     } else if (!email) {
       setFeedback("Email id required");
-      setTimeout(setFeedback(""), 2000);
     } else if (!occupation) {
       setFeedback("Occupation id required");
-      setTimeout(setFeedback(""), 2000);
     } else if (!bio) {
       setFeedback("Bio id required");
-      setTimeout(setFeedback(""), 2000);
     } else {
       user.id = id;
       setloading(true);
@@ -81,6 +76,7 @@ const Edit = ({
       setuser(res);
       setloading(false);
     }
+    setTimeout(setFeedback(""), 2000);
   };
 
   return (
