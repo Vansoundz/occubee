@@ -26,7 +26,10 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink exact={true} to="/account">
+                <NavLink
+                  exact={true}
+                  to={`/usr/${Math.floor(Math.random() * 100) + 1}`}
+                >
                   Account
                 </NavLink>
               </li>
